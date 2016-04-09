@@ -1,6 +1,8 @@
 import {Component} from 'angular2/core';
 import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router';
 import {CliRouteConfig} from './route-config';
+import {WeatherAPI} from './weatherAPI/weatherAPI';
+import {WeatherData} from './model/weatherdata';
 
 @Component({
   selector: 'ng-weather-app',
@@ -14,9 +16,16 @@ import {CliRouteConfig} from './route-config';
 ].concat(CliRouteConfig))
 
 export class NgWeatherApp {
-  defaultMeaning: number = 42;
 
-  meaningOfLife(meaning?: number) {
-    return `The meaning of life is ${meaning || this.defaultMeaning}`;
+  city2 = new WeatherData("Test", 1, 1, 1, 1);
+
+  cities: Object[];
+
+  constructor(public _weatherAPI: WeatherAPI) {
+  	this.getWeather();
+  }
+
+  getWeather() {
+  	this._weatherAPI.getWeather().subscribe(cities => this.cities = cities);
   }
 }

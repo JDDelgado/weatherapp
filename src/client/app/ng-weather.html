@@ -2,4 +2,12 @@
   ng-weather Works!
 </p>
 
+<ul>
+	<li *ngFor="#city of cities">{{city.City}} - {{city.Temperature}}</li>
+</ul>
+
+<p>
+	{{city2.City}}
+</p>
+
 <router-outlet></router-outlet>
