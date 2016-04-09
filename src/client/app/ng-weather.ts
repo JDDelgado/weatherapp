@@ -18,7 +18,6 @@ import {WeatherData} from './model/weatherdata';
 export class NgWeatherApp {
 
   city2 = new WeatherData("Test", 1, 1, 1, 1);
-
   cities: Object[];
 
   constructor(public _weatherAPI: WeatherAPI) {
@@ -27,5 +26,14 @@ export class NgWeatherApp {
 
   getWeather() {
   	this._weatherAPI.getWeather().subscribe(cities => this.cities = cities);
+  }
+
+  refreshCities(event) {
+    this._weatherAPI.getWeather().subscribe(cities => this.cities = cities);
+  }
+
+  deleteCities(event) {
+    this._weatherAPI.deleteWeather();
+    this.cities = [];
   }
 }

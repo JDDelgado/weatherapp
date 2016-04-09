@@ -17,4 +17,8 @@ export class WeatherAPI {
 
   	return this.http.get('http://globalmapweather.azurewebsites.net:80/api/Weather', headers).map(res => res.json())
   }
+
+  deleteWeather() {
+  	this.http.delete('http://globalmapweather.azurewebsites.net:80/api/Weather');
+  }
 }

@@ -2,11 +2,19 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>NgWeather</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ng-Weather</title>
   <base href="/">
   {{content-for 'head'}}
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  
+  <link rel="stylesheet" href="css/pure-css.css">
+
+  <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="css/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="css/layouts/blog.css">
   <!-- Service worker support is disabled by default.
        Install the worker script and uncomment to enable.
        Only enable service workers in production.
