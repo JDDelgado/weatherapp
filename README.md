@@ -3,6 +3,8 @@ Angular JS 2 - ngWeatherAPP
 
 Project Develop for Angular Hackday in Melbourne on 09/04/2016 learning the basics of Angular JS 2.
 
+![Banner](http://jddelgado.github.io/ng-weather.png)
+
 Prerequisites
 =============
 
