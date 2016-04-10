@@ -16,8 +16,7 @@ import {WeatherData} from './model/weatherdata';
 ].concat(CliRouteConfig))
 
 export class NgWeatherApp {
-
-  city2 = new WeatherData("Test", 1, 1, 1, 1);
+  
   cities: Object[];
 
   constructor(public _weatherAPI: WeatherAPI) {
